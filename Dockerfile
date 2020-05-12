@@ -8,4 +8,4 @@ ENV PLACES_APP_PORT=3000
 
 COPY ./src/conf.d/default.conf /etc/nginx/conf.d/
 
-RUN 'envsubst < /etc/nginx/conf.d/default.conf > /etc/nginx/conf.d/default.conf'
+RUN envsubst < /etc/nginx/conf.d/default.conf > /etc/nginx/conf.d/default.conf
