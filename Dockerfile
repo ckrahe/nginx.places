@@ -7,3 +7,9 @@ MAINTAINER Chris Krahe
 #ENV APP_PORT=3000
 
 COPY ./src/conf.d/default.conf /etc/nginx/conf.d/
+
+EXPOSE 80
+
+STOPSIGNAL SIGTERM
+
+CMD ["nginx", "-g", "daemon off;"]
