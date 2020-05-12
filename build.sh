@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-if [[ -z "${PLACES_APP_HOST}" ]]; then
-  read -r -p 'App host: ' PLACES_APP_HOST
-  export PLACES_APP_HOST
+if [[ -z "${APP_HOST}" ]]; then
+  read -r -p 'App host: ' APP_HOST
+  export APP_HOST
 fi
-if [[ -z "${PLACES_APP_PORT}" ]]; then
-  read -r -p 'App port: ' PLACES_APP_PORT
-  export PLACES_APP_PORT
+if [[ -z "${APP_PORT}" ]]; then
+  read -r -p 'App port: ' APP_PORT
+  export APP_PORT
 fi
 
 mkdir -p dist/default.d
