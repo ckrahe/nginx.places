@@ -2,10 +2,14 @@ FROM nginx:latest
 
 MAINTAINER Chris Krahe
 
-ENV PLACES_WEB_PORT=80
-ENV PLACES_APP_HOST=placesapp
-ENV PLACES_APP_PORT=3000
+ARG PORT_ARG=80
+ARG APP_HOST_ARG=placesapp
+ARG APP_PORT_ARG=3000
+
+ENV PORT=$PORT_ARG
+ENV APP_HOST=$APP_HOST_ARG
+ENV APP_PORT=$APP_PORT_ARG
 
 COPY ./src/conf.d/default.conf /etc/nginx/conf.d/
 
-RUN envsubst < /etc/nginx/conf.d/default.conf > /etc/nginx/conf.d/default.conf
+RUN envsubst '$PORT $APP_HOST $APP_PORT' < /etc/nginx/conf.d/default.conf > /etc/nginx/conf.d/default.conf

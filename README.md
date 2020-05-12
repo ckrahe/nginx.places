@@ -14,11 +14,12 @@ _We assume nginx.conf server includes default.d/*_
 ## Docker network deployment
 _We assume nginx.conf server includes conf.d/default.conf_
  
-1. Modify Dockerfile if needed
-1. docker build ...
-1. docker run ... -p 80:80 ...
+1. docker build ... { --build-arg PORT_ARG=_port_ } { --build-arg _name_=_value_} ...
+1. docker run ... -p _port_:_port_ ...
 1. docker network add ...
+
+_See Dockerfile for other build-args and defaults_
 
 ## Use
 
-*  Browse to http://host/places
+*  Browse to http://host.port/places/
