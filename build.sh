@@ -10,4 +10,4 @@ if [[ -z "${APP_PORT}" ]]; then
 fi
 
 mkdir -p dist/default.d
-envsubst < src/default.d/places.conf > dist/default.d/places.conf
+envsubst "\$APP_HOST \$APP_PORT" < src/default.d/places.conf > dist/default.d/places.conf
