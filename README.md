@@ -1,7 +1,7 @@
 # nginx.places
 NGINX component for Places app. Proxies requests to Places UI.
 
-## Pre-requisites
+## Prerequisites
 * Places app instance or container
 * App container has network alias _placesapp_ (default)
 
