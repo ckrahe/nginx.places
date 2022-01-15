@@ -22,4 +22,4 @@ _See Dockerfile for other build-args and defaults_
 
 ## Use
 
-*  Browse to http://host.port/places/
+*  Browse to http://host:port/places/
